@@ -14,6 +14,9 @@
 		B83CCCC219E189FB00388122 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83CCCC119E189FB00388122 /* Images.xcassets */; };
 		B83CCCC519E189FB00388122 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83CCCC319E189FB00388122 /* LaunchScreen.xib */; };
 		B83CCCD119E189FB00388122 /* CrystalBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B83CCCD019E189FB00388122 /* CrystalBallTests.m */; };
+		B83CCCDC19E21D9F00388122 /* THCrystalBall.m in Sources */ = {isa = PBXBuildFile; fileRef = B83CCCDB19E21D9F00388122 /* THCrystalBall.m */; };
+		B83CCCDE19E24B1900388122 /* crystal_ball.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B83CCCDD19E24B1900388122 /* crystal_ball.mp3 */; };
+		B83CCCE219E24F5200388122 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83CCCE119E24F5200388122 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		B83CCCCA19E189FB00388122 /* CrystalBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrystalBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83CCCCF19E189FB00388122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83CCCD019E189FB00388122 /* CrystalBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrystalBallTests.m; sourceTree = "<group>"; };
+		B83CCCDA19E21D9F00388122 /* THCrystalBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCrystalBall.h; sourceTree = "<group>"; };
+		B83CCCDB19E21D9F00388122 /* THCrystalBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCrystalBall.m; sourceTree = "<group>"; };
+		B83CCCDD19E24B1900388122 /* crystal_ball.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crystal_ball.mp3; sourceTree = "<group>"; };
+		B83CCCDF19E24B7500388122 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B83CCCE119E24F5200388122 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83CCCE219E24F5200388122 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		B83CCCA819E189FB00388122 = {
 			isa = PBXGroup;
 			children = (
+				B83CCCE119E24F5200388122 /* AVFoundation.framework */,
+				B83CCCDF19E24B7500388122 /* AudioToolbox.framework */,
 				B83CCCB319E189FB00388122 /* CrystalBall */,
 				B83CCCCD19E189FB00388122 /* CrystalBallTests */,
 				B83CCCB219E189FB00388122 /* Products */,
@@ -81,14 +92,15 @@
 		B83CCCB319E189FB00388122 /* CrystalBall */ = {
 			isa = PBXGroup;
 			children = (
-				B83CCCB819E189FB00388122 /* AppDelegate.h */,
-				B83CCCB919E189FB00388122 /* AppDelegate.m */,
 				B83CCCBB19E189FB00388122 /* ViewController.h */,
 				B83CCCBC19E189FB00388122 /* ViewController.m */,
+				B83CCCDD19E24B1900388122 /* crystal_ball.mp3 */,
 				B83CCCBE19E189FB00388122 /* Main.storyboard */,
 				B83CCCC119E189FB00388122 /* Images.xcassets */,
 				B83CCCC319E189FB00388122 /* LaunchScreen.xib */,
 				B83CCCB419E189FB00388122 /* Supporting Files */,
+				B83CCCDA19E21D9F00388122 /* THCrystalBall.h */,
+				B83CCCDB19E21D9F00388122 /* THCrystalBall.m */,
 			);
 			path = CrystalBall;
 			sourceTree = "<group>";
@@ -96,6 +108,8 @@
 		B83CCCB419E189FB00388122 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B83CCCB819E189FB00388122 /* AppDelegate.h */,
+				B83CCCB919E189FB00388122 /* AppDelegate.m */,
 				B83CCCB519E189FB00388122 /* Info.plist */,
 				B83CCCB619E189FB00388122 /* main.m */,
 			);
@@ -168,6 +182,7 @@
 				TargetAttributes = {
 					B83CCCB019E189FB00388122 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = PXQ8GUW54S;
 					};
 					B83CCCC919E189FB00388122 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -201,6 +216,7 @@
 			files = (
 				B83CCCC019E189FB00388122 /* Main.storyboard in Resources */,
 				B83CCCC519E189FB00388122 /* LaunchScreen.xib in Resources */,
+				B83CCCDE19E24B1900388122 /* crystal_ball.mp3 in Resources */,
 				B83CCCC219E189FB00388122 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +238,7 @@
 				B83CCCBD19E189FB00388122 /* ViewController.m in Sources */,
 				B83CCCBA19E189FB00388122 /* AppDelegate.m in Sources */,
 				B83CCCB719E189FB00388122 /* main.m in Sources */,
+				B83CCCDC19E21D9F00388122 /* THCrystalBall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +360,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CrystalBall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -353,9 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CrystalBall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -412,6 +435,7 @@
 				B83CCCD619E189FB00388122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B83CCCD719E189FB00388122 /* Build configuration list for PBXNativeTarget "CrystalBallTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +444,7 @@
 				B83CCCD919E189FB00388122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

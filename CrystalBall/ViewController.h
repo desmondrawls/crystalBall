@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class THCrystalBall;
+
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
+@property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
+@property (strong, nonatomic) THCrystalBall *crystalBall;
+
+-(void) makePrediction;
+
+//- (IBAction)buttonPressed;
 
 
 @end
